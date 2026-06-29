@@ -1,4 +1,4 @@
---customers table--
+--customers table
 CREATE TABLE customers (
   customer_id SERIAL PRIMARY KEY,
   first_name VARCHAR(50) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE customers (
   CURRENT_DATE
 );
 ________________________________________
---events table--
+--events table
 CREATE TABLE events (
   event_id SERIAL PRIMARY KEY,
   event_name VARCHAR(100) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE events (
   ticket_price NUMERIC(10,2) NOT NULL
 );
 
---bookings table--
+--bookings table
 CREATE TABLE bookings (
   booking_id SERIAL PRIMARY KEY,
   customer_id INT NOT NULL,
@@ -40,7 +40,7 @@ CURRENT_DATE,
 	ON DELETE CASCADE
 );
 
---payments table--
+--payments table
 CREATE TABLE payments (
   payment_id SERIAL PRIMARY KEY,
   booking_id INT NOT NULL,
@@ -56,7 +56,7 @@ CURRENT_DATE,
 	ON DELETE CASCADE
 );
 
---venues table--
+--venues table
 CREATE TABLE venuez (
   venue_id SERIAL PRIMARY KEY,
   venue_name VARCHAR(100) NOT NULL,
