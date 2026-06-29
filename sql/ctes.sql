@@ -12,7 +12,6 @@ SELECT *
 FROM HighValueBookings;
 
 -- Multiple CTEs
-
 WITH ExpensiveEvents AS (
     SELECT
         event_id,
@@ -43,7 +42,6 @@ JOIN ExpensiveEvents e
 ON cb.event_id = e.event_id;
 
 -- Recursive CTE
-
 WITH RECURSIVE BookingNumbers AS (
 
     SELECT 1 AS booking_number
@@ -60,7 +58,6 @@ SELECT *
 FROM BookingNumbers;
 
 -- CTE with Aggregation
-
 WITH EventRevenue AS (
 
     SELECT
@@ -80,7 +77,6 @@ ON er.event_id = e.event_id
 ORDER BY er.total_revenue DESC;
 
 -- CTE with JOIN
-
 WITH BookingDetails AS (
 
     SELECT
